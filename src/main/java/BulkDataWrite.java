@@ -15,11 +15,20 @@ public class BulkDataWrite {
 
     public static void main(String[] args) throws IOException, SQLException, ClassNotFoundException {
 
-        /*List<String[]> csvData = createCsvDataSimple();
+        /*
+            To Create CSV file.
+            Uncomment the below to generate the CSV File.
+         */
+
+        /*
+        List<String[]> csvData = createCsvDataSimple();
         try (CSVWriter writer = new CSVWriter(new FileWriter("C:\\BulkData\\test.csv"))) {
             writer.writeAll(csvData);
-        }*/
+        } */
 
+        /*
+         To Insert Data into DataBase.
+         */
         DatabseInsertRecords();
 
     }
@@ -62,7 +71,7 @@ public class BulkDataWrite {
         String[] header = {"id", "firstname","lastName","age","address 1","address2"};
         //String[] record1 = {"1", "first name", "lastName","age","address 1", "11111"};
         list.add(header);
-        for(int i=0;i<1000000;i++){
+        for(int i=0;i<100;i++){
             int randomNum =  ThreadLocalRandom.current().nextInt(4, 90 + 1);
             String[] record2 = {String.valueOf(i),"fN_"+i,"lN_"+i, String.valueOf(randomNum),"addess1","addres2"};
             list.add(record2);
