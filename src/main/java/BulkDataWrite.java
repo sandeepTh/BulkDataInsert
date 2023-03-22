@@ -16,6 +16,7 @@ public class BulkDataWrite {
     public static void main(String[] args) throws IOException, SQLException, ClassNotFoundException {
 
         /*
+        Newg
             To Create CSV file.
             Uncomment the below to generate the CSV File.
          */
